@@ -34,6 +34,7 @@ const CreateMentor = () => {
     formData.append("education", mentorData.education);
     formData.append("experience", mentorData.experience);
     formData.append("interests", mentorData.interests);
+    formData.append("coverpicture", mentorData.coverpicture);
     formData.append("profilepicture", mentorData.profilepicture);
 
     try {

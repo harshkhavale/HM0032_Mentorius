@@ -2,16 +2,41 @@ import React, { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { logo } from "../assets";
 import JoinClassrooms from "./modals/JoinClassrooms";
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const isNonMobileScreen = useMediaQuery("(min-width:1000px)");
+  const user = useSelector((state) => state.user.user);
 
   return (
-    <div className="navbar text-sm md:text-base p-2 flex justify-between w-full overflow-x-hidden items-center">
+    <div className="navbar text-sm md:text-base p-2 flex justify-between w-full overflow-x-hidden items-center h-[10vh]">
       {showModal && <JoinClassrooms onClose={() => setShowModal(false)} />}
 
       <div className="logo">
-        <img src={logo} className="md:h-14 ps-6 md:ps-auto h-10" alt="" />
+        <a href="/">
+          <img src={logo} className="md:h-14 ps-6 md:ps-auto h-10" alt="" />
+        </a>
+      </div>
+      <div className="flex justify-center inline-flex items-center space-x-4 sm:space-x-8 text-sky-600">
+        <a className="ease-in duration-200 hover:font-bold" href="/news">
+          News
+        </a>
+        <a className="ease-in duration-200 hover:font-bold" href="/find_mentor">
+          Find a Mentor
+        </a>
+        <a className="ease-in duration-200 hover:font-bold" href="/#contact">
+          Contact
+        </a>
+        <a
+          className="rounded-full pl-3 pr-3 pt-2 pb-2 bg-sky-100"
+          href="/auth/login"
+        >
+          Login
+        </a>
+      </div>
+      <div className="text-large font-bold">
+        {user ? <a href="/dashboard">hi, {user.fullname}</a> : ""}
       </div>
       <div className="middle flex items-center gap-4 justify-center">
         <div className="search flex border rounded-xl items-center p-2">
@@ -56,6 +81,7 @@ const Navbar = () => {
             />
           </svg>
         </div>
+
         {isNonMobileScreen && (
           <button
             onClick={() => setShowModal(true)}
