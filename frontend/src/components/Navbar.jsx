@@ -119,7 +119,9 @@ const Navbar = () => {
                   d="M3 12h18M12 3v18"
                 />
               </svg>
-              {user.usertype == "MENTOR" ? "Create Classroom" : "Become Mentor"}
+              {user && user.usertype == "MENTOR"
+                ? "Create Classroom"
+                : "Become Mentor"}
             </button>
           )}
           {!user && (

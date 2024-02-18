@@ -32,9 +32,9 @@ app.use(
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "*",
   credentials: true,
-  optionsSuccessStatus: 200, // Corrected typo
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
