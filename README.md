@@ -1,18 +1,27 @@
-# HM0032 TheNxtBigThing
+<div align="center">
+  <img src="https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/e65395ca-5d9e-4967-b5d7-896766665e72" height="200" />
+</div>
+
+# HM0032 TheNxtBigThing 
 
 ## Develop a streamlined platform for addressing the lack of personalized mentorship using efficient mentor matching, and ensuring tailored and effective mentorship experiences.
+
+### Our Solution:
+<div align="center">
+<img src="https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/20e19320-b6c3-495e-8561-a1d1ca3ec91c" height="200" width="auto" />
+</div>
 
 ## Description
 The project aims to address the lack of personalized mentorship in education by developing an all-in-one platform called Mentorius. Mentorius utilizes an advanced matching algorithm to pair students with suitable mentors based on their preferences, goals, and interests. Through seamless communication tools and a feedback mechanism, Mentorius ensures a tailored and effective mentorship experience for educational and career growth.
 
 ## Features
-- Profile Creation: Students and mentors can create profiles highlighting their background, expertise, and availability.
+- Profile Creation: Highlight background, expertise, and availability.
 
-- Preference Input: Users can input their preferences, goals, and interests through an intuitive interface.
+- Preference Input: Input preferences, goals, and interests easily.
 
-- Advanced Matching Algorithm: An algorithm analyzes user profiles and preferences to suggest suitable mentor matches.
+- Advanced Matching Algorithm: Suggest suitable mentor matches.
 
-- Communication Tools: The platform provides messaging and video conferencing tools for seamless mentor-student interactions.
+- Communication Tools: Messaging and video conferencing for interactions.
 
 - Feedback Mechanism: Both students and mentors can provide feedback on their mentorship experiences, facilitating continuous improvement.
 
