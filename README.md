@@ -24,7 +24,7 @@ The project aims to address the lack of personalized mentorship in education by 
   
 - Availability Management: Mentors can set their availability, making it easier for students to schedule meetings.
 
-##Future Enhancements 
+## Future Enhancements 
 - Search and Filter: Users can search for mentors based on specific criteria and apply filters to narrow down their options.
 
 - Goal Tracking: Users can set and track their goals within the platform, enabling them to monitor their progress over time.
