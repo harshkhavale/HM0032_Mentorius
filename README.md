@@ -109,7 +109,7 @@ The project addresses the lack of personalized mentorship in education by develo
   </tr>
   <tr>
     <td>Helmet</td>
-    <td><img height="50" src="https://i.pinimg.com/originals/3b/f7/e3/3bf7e32883de5cfc759d818ebae9eda8.png" /></td>
+    <td><img height="50" src="https://repository-images.githubusercontent.com/3329923/2fd1c70a-c521-4087-9c1d-bf3e1fff3e4d" /></td>
     <td>Secure setting of HTTP response headers</td>
   </tr>
   <tr>
