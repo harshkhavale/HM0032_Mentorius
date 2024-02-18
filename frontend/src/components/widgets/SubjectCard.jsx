@@ -12,7 +12,7 @@ const SubjectCard = ({ subject }) => {
           <div className="thumbnail md:h-[15rem] md:w-[15rem] h-[10rem] w-[10rem]">
             {subject.thumbnail && (
               <img
-                src={`http://localhost:5000/thumbnails/${subject.thumbnail}`}
+                src={`https://mentorius-server.onrender.com/thumbnails/${subject.thumbnail}`}
                 alt={subject.name}
                 onError={(e) => console.error("Image error:", e)}
                 className=" h-full w-full object-cover rounded-xl" // Check image loading errors

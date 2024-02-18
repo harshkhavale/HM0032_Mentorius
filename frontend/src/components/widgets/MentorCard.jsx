@@ -8,7 +8,7 @@ const MentorCard = ({ mentor }) => {
       className="card relative shadow-xl rounded-2xl w-6/12 md:w-4/12 overflow-hidden "
     >
       <img
-        src={`http://localhost:5000/assets/${mentor.profilepicture}`}
+        src={`https://mentorius-server.onrender.com/assets/${mentor.profilepicture}`}
         alt="image"
         className="w-full h-auto object-cover"
       />
