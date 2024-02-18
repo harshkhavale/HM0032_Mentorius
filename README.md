@@ -196,6 +196,12 @@ The project addresses the lack of personalized mentorship in education by develo
 ### Finding Mentor
 ![image](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/2ba6aeba-266d-4cf0-8b05-72dbb9851af2)
 
+## Create Classroom
+![create classroom](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/cde20940-2292-49a4-8ea1-251804eff27b)
+
+## Create Meeting
+![create room](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/d67997c7-b583-4b41-8935-79ac28b2efe6)
+
 ### MongoDB
 ![image](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/b1cbd91f-972a-45d4-8f40-b9d452bfe3eb)
 
@@ -206,7 +212,9 @@ The project addresses the lack of personalized mentorship in education by develo
 [https://mentorius.vercel.app/](https://mentorius.vercel.app/)
 
 ## Video URL 🎥
-[Link to Demo Video](video_url)
+[Link to Demo Video](https://youtu.be/wqdvSzmVEHI)
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wqdvSzmVEHI/0.jpg)](https://www.youtube.com/watch?v=wqdvSzmVEHI)
 
 ## Remarks
 - We are happy we could make such an awesome project in 24 hours! 🌟
