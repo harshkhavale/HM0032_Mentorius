@@ -22,7 +22,7 @@ const Explore = () => {
   }, [user.id]);
   return (
     <div className="flex justify-center min-h-screen">
-      <div className="flex flex-wrap h-min w-screen gap-8 p-2 md:w-[60vw]">
+      <div className="flex flex-wrap h-min w-screen gap-4 p-2 md:w-[60vw]">
         {mentors.map((mentor, index) => (
           <MentorCard key={index} mentor={mentor} />
         ))}

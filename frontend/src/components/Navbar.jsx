@@ -31,12 +31,9 @@ const Navbar = () => {
         {isNonMobileScreen && (
           <>
             <div className="flex justify-center items-center space-x-4 sm:space-x-8 text-sky-600">
-              <a className="ease-in duration-200 hover:font-bold" href="/news">
-                News
-              </a>
               <a
                 className="ease-in duration-200 hover:font-bold"
-                href="/find_mentor"
+                href="/findmentor"
               >
                 Find a Mentor
               </a>
@@ -46,12 +43,14 @@ const Navbar = () => {
               >
                 Contact
               </a>
-              <a
-                className="rounded-full pl-3 pr-3 pt-2 pb-2 bg-sky-100"
-                href="/auth/login"
-              >
-                Login
-              </a>
+              {!user && (
+                <a
+                  className="rounded-full pl-3 pr-3 pt-2 pb-2 bg-sky-100"
+                  href="/auth/login"
+                >
+                  Login
+                </a>
+              )}
             </div>
           </>
         )}
@@ -100,7 +99,7 @@ const Navbar = () => {
             </svg>
           </div>
 
-          {isNonMobileScreen && (
+          {user && user.usertype == "MENTOR" && isNonMobileScreen && (
             <button
               onClick={() => setShowModal(true)}
               className="ml-auto bg-primary text-white shadow-lg p-2 flex  items-center gap-2 rounded-lg"
@@ -119,9 +118,30 @@ const Navbar = () => {
                   d="M3 12h18M12 3v18"
                 />
               </svg>
-              {user && user.usertype == "MENTOR"
-                ? "Create Classroom"
-                : "Become Mentor"}
+              Create Classroom
+            </button>
+          )}
+
+          {user && user.usertype != "MENTOR" && isNonMobileScreen && (
+            <button
+              onClick={() => setShowModal(true)}
+              className="ml-auto bg-primary text-white shadow-lg p-2 flex  items-center gap-2 rounded-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="#fff"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 12h18M12 3v18"
+                />
+              </svg>
+              Become Mentor
             </button>
           )}
           {!user && (

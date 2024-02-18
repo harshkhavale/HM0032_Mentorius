@@ -13,7 +13,7 @@ const MentorProfile = () => {
   const user = useSelector((state) => state.user.user);
 
   const handleEnrollment = async () => {
-    const response = await publicRequest(`/mentors/${id}/enroll`, {
+    const response = await publicRequest.post(`/mentors/${id}/enroll`, {
       userIds: user.id,
     });
     console.log(response);
@@ -39,12 +39,12 @@ const MentorProfile = () => {
   return (
     <div className="profile relative h-full ">
       <img
-        src={coverimage}
+        src={`https://mentorius-server.onrender.com/assets/${mentor.coverpicture}`}
         alt="banner"
         className="w-full h-[10rem] object-cover md:h-[20rem]"
       />
       <img
-        src={`http://localhost:5000/assets/${mentor.profilepicture}`}
+        src={`https://mentorius-server.onrender.com/assets/${mentor.profilepicture}`}
         alt="image"
         className="w-40 md:w-80 absolute top-20 md:top-40 ms-[2rem] border-4 rounded-full h-40 md:h-80 object-cover"
       />

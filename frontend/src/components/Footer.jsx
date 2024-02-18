@@ -27,10 +27,7 @@ const Footer = () => {
                   123456789
                 </a>
               </p>
-              <ul className="mt-8 space-y-1 text-sm  ">
-                <li>Monday to Friday: 10AM - 5PM</li>
-                <li>Weekend: 10AM - 3PM</li>
-              </ul>
+
               <ul className="mt-8 flex gap-6">
                 <li>
                   <a
@@ -127,29 +124,29 @@ const Footer = () => {
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
                     <a href="#" className=" transition hover:opacity-75 dark:">
-                      Company Review
+                      Mentorship
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75 dark:">
-                      Accounts Review
+                      Courses
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75 dark:">
-                      HR Consulting
+                      Consultation
                     </a>
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75 dark:">
-                      SEO Optimisation
+                      Education
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">
-                  TradeSwift
+                  Mentorius
                 </p>
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -164,7 +161,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a href="#" className=" transition hover:opacity-75 dark:">
-                      Accounts Review
+                      Mentorius School
                     </a>
                   </li>
                 </ul>
@@ -191,7 +188,7 @@ const Footer = () => {
                 </li>
               </ul>
               <p className="mt-8 text-xs  sm:mt-0 ">
-                &copy; 2024. TradeSwift. All rights reserved.
+                &copy; 2024. @Mentorius. All rights reserved.
               </p>
             </div>
           </div>

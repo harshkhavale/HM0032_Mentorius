@@ -24,7 +24,7 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full bg-white text-gray-700 rounded-l px-3 py-2 tracking-tighter"
+                className="w-full bg-white text-gray-700 p-6 rounded-3xl tracking-tighter"
                 required
                 placeholder="Your Name"
               />
@@ -35,7 +35,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-white text-gray-700 rounded-l px-3 py-2 tracking-tighter"
+                className="w-full bg-white text-gray-700  p-6 rounded-3xl tracking-tighter"
                 required
                 placeholder="youremail@gmail.com"
               />
@@ -46,7 +46,7 @@ const Contact = () => {
                 type="tel"
                 id="mobile"
                 name="mobile"
-                className="w-full bg-white text-gray-700 rounded-l px-3 py-2 tracking-tighter"
+                className="w-full bg-white text-gray-700 p-6 rounded-3xl tracking-tighter"
                 required
                 placeholder="123456789"
               />
@@ -58,7 +58,7 @@ const Contact = () => {
                 id="message"
                 name="message"
                 rows="3"
-                className="w-full bg-white text-gray-700 rounded-l px-3 py-2 tracking-tighter"
+                className="w-full bg-white text-gray-700 p-6 rounded-3xl tracking-tighter"
                 required
                 placeholder="your message!"
               ></textarea>
@@ -66,7 +66,7 @@ const Contact = () => {
             <br />
             <button
               type="submit"
-              className="bg-sky-900 text-white rounded flex-none font-bold hover:bg-lightBlue-500 px-8 py-2"
+              className="bg-sky-200 p-6 rounded-3xl p-6 flex-none font-bold hover:bg-lightBlue-500 px-8 py-2"
             >
               Send ✈️
             </button>

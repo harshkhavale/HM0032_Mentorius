@@ -29,9 +29,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={user ? <User /> : <Home />} />
           <Route path="/*" element={<NotFound />} />
-          <Route path="/find_mentor" element={<FindMentor />} />
+          <Route path="/findmentor" element={<FindMentor />} />
           <Route path="/news" element={<News />} />
           <Route path="/mentor" element={<MentorProfile />} />
 

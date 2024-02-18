@@ -18,12 +18,15 @@ const Hero = () => {
                   all of them arranged by topics & categories. There is no
                   excuse for you to not study.
                 </p>
-                <a className="bg-white p-2 rounded font-bold py-2 " href="/join">
+                <a
+                  className="bg-white rounded-full p-4 font-bold "
+                  href="/findmentor"
+                >
                   <span>Get Started!</span>{" "}
                   <span className="font-normal">(as free as air)</span>
                 </a>
               </div>
-              <div className="w-full md:w-6/12 flex-none">
+              <div className="w-full md:w-6/12 shadow-2xl flex-none">
                 <img
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070"
                   className="w-[50vw] rounded-md"
@@ -32,7 +35,11 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <img src={wave} alt="" className="w-full p-0 m-0 pt-[-100px] mt-[-100px]" />
+        <img
+          src={wave}
+          alt=""
+          className="w-full p-0 m-0 pt-[-100px] mt-[-100px]"
+        />
       </div>
     </>
   );
