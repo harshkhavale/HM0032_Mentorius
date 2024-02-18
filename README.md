@@ -4,7 +4,7 @@
 
 # HM0032 TheNxtBigThing 💻
 # Building <i>The Next Big Thing</i> in Mentorship! 🚀
-## Develop a streamlined platform for addressing the lack of personalized mentorship using efficient mentor matching, and ensuring tailored and effective mentorship experiences.
+## Develop a streamlined platform for addressing the lack of personalized mentorship using efficient mentor matching and ensuring tailored and effective mentorship experiences.
 
 ### Our Solution:
 <div align="center">
@@ -169,6 +169,35 @@ The project addresses the lack of personalized mentorship in education by develo
 </table>
   
 ## Screenshots 📸
+
+### Home/Landing Page
+![home](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/a728acf4-1723-488e-a18f-ecd95f4aa471)
+
+### Contact Page
+![image](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/cbc02b9d-eefa-4c16-9f99-41e3c5c9aff7)
+
+![image](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/b222bac7-e844-417e-b44a-3c2ab2078610)
+
+### News Page
+![news](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/e299072f-689e-4300-ac5c-17637ece666f)
+
+### Signup Page
+![signup](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/3ee4fcbf-d218-4d62-a76e-3fa679d9a5a9)
+
+### Login Page
+![login](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/325c9c2c-3525-4b59-a782-ecf3fc37b67b)
+
+### User Dashboard
+![dashboard](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/00e9542d-6670-4025-a3b9-dce30765f3e7)
+
+### Become Mentor
+![become mentor](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/6d802cfc-d279-44fb-9886-4efca83dff6f)
+
+### Finding Mentor
+![image](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/2ba6aeba-266d-4cf0-8b05-72dbb9851af2)
+
+### MongoDB
+![image](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/b1cbd91f-972a-45d4-8f40-b9d452bfe3eb)
 
 ### Mentor Recommendation Model
 ![recommendation](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/1c260d43-3b35-40ea-85c4-32fa058f0ff4)
