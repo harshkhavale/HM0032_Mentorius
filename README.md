@@ -2,8 +2,8 @@
   <img src="https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/e65395ca-5d9e-4967-b5d7-896766665e72" height="200" />
 </div>
 
-# HM0032 TheNxtBigThing 
-
+# HM0032 TheNxtBigThing 💻
+# Building <i>The Next Big Thing</i> in Mentorship! 🚀
 ## Develop a streamlined platform for addressing the lack of personalized mentorship using efficient mentor matching, and ensuring tailored and effective mentorship experiences.
 
 ### Our Solution:
@@ -11,10 +11,10 @@
 <img src="https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/20e19320-b6c3-495e-8561-a1d1ca3ec91c" height="200" width="auto" />
 </div>
 
-## Description
-The project aims to address the lack of personalized mentorship in education by developing an all-in-one platform called Mentorius. Mentorius utilizes an advanced matching algorithm to pair students with suitable mentors based on their preferences, goals, and interests. Through seamless communication tools and a feedback mechanism, Mentorius ensures a tailored and effective mentorship experience for educational and career growth.
+## Description 📝
+The project addresses the lack of personalized mentorship in education by developing an all-in-one platform called Mentorius. Mentorius utilizes an advanced matching algorithm to pair students with suitable mentors based on their preferences, goals, and interests. Through seamless communication tools and a feedback mechanism, Mentorius ensures a tailored and effective mentorship experience for educational and career growth.
 
-## Features
+## Key Features 🔑
 - Profile Creation: Highlight background, expertise, and availability.
 
 - Preference Input: Input preferences, goals, and interests easily.
@@ -23,34 +23,35 @@ The project aims to address the lack of personalized mentorship in education by 
 
 - Communication Tools: Messaging and video conferencing for interactions.
 
-- Feedback Mechanism: Both students and mentors can provide feedback on their mentorship experiences, facilitating continuous improvement.
+- Feedback Mechanism: Both students and mentors can provide feedback for continuous improvement.
 
-- Easy Sign-up: Users can sign up easily and quickly, minimizing barriers to entry.
+- Easy Sign-up: Quick and easy registration process.
 
-- User Authentication: Secure authentication mechanisms ensure the safety and privacy of user data.
+- User Authentication: Secure authentication mechanisms.
 
-- Customizable Profiles: Users can customize their profiles to accurately reflect their skills, experiences, and preferences..
+- Customizable Profiles: Reflect skills, experiences, and preferences accurately.
   
-- Availability Management: Mentors can set their availability, making it easier for students to schedule meetings.
+- Availability Management: Set availability for scheduling meetings.
 
-## Future Enhancements 
-- Search and Filter: Users can search for mentors based on specific criteria and apply filters to narrow down their options.
+- Responsiveness: Site viewed with 0 hurdles even on small devices like mobile 📱.
 
-- Goal Tracking: Users can set and track their goals within the platform, enabling them to monitor their progress over time.
+## Future Enhancements 🌱
+- Search and Filter: Search mentors based on criteria and apply filters.
 
-- Resource Sharing: Mentors can share relevant resources such as articles, videos, and documents with their mentees.
+- Goal Tracking: Set and track goals within the platform.
 
-- Progress Monitoring: Users can track their progress in mentorship relationships and monitor their development over time.
+- Resource Sharing: Share relevant resources with/from mentees.
 
-- Mobile Compatibility: The platform is accessible via mobile devices, allowing users to connect with mentors on the go.
+- Progress Monitoring: Track progress in mentorship relationships.
 
-- Integration with External Platforms: Mentorius can integrate with external platforms such as LinkedIn to provide additional networking opportunities.
+- Mobile Compatibility: Access platform via mobile devices.
 
-## Tech Stack
+- Integration with External Platforms: Integrate with LinkedIn for networking opportunities.
+
+## Tech Stack ⚙️
 <img src="https://miro.medium.com/v2/resize:fit:678/0*kxPYwfJmkXZ3iCWy.png" height="200" />
 
-
-- Frontend:
+### Frontend 🖥️
 <table width="50%" style="text-align:center;">
   <tr>
     <td>Vite</td>
@@ -89,7 +90,7 @@ The project aims to address the lack of personalized mentorship in education by 
   </tr>
 </table>
 
-- Backend:
+### Backend 📡
 <table width="50%" style="text-align:center;">
   <tr>
     <td>MongoDB</td>
@@ -128,7 +129,7 @@ The project aims to address the lack of personalized mentorship in education by 
   </tr>
 </table>
 
-- Other tools:
+### Other tools 🛠️
 <table width="50%" style="text-align:center">
   <tr>
     <td>REST API</td>
@@ -167,15 +168,17 @@ The project aims to address the lack of personalized mentorship in education by 
   </tr>
 </table>
   
-  
-## Screenshots
+## Screenshots 📸
 
+### Mentor Recommendation Model
+![recommendation](https://github.com/harshkhavale/HM0032_Mentorius/assets/68807845/1c260d43-3b35-40ea-85c4-32fa058f0ff4)
 
-## Deployed Url
-[Link to Deployed Solution](gfgpccoe.in)
+## Deployed URL 📡🌐
+[https://mentorius.vercel.app/](https://mentorius.vercel.app/)
 
-## Video Url
+## Video URL 🎥
 [Link to Demo Video](video_url)
 
 ## Remarks
-- Any additional things you want to share
+- We are happy we could make such an awesome project in 24 hours! 🌟
+- Thank you GFGPCCOE 🙏
