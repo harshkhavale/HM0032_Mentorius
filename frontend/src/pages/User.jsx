@@ -27,14 +27,14 @@ const User = () => {
         <div className="">
           {toggle ? (
             <div
-              className="fixed top-1 z-50 start-0 p-1 cursor-pointer"
+              className="fixed top-6 z-50 start-0 p-1 cursor-pointer"
               onClick={() => setToggle(false)}
             >
               <MenuIcon />
             </div>
           ) : (
             <div
-              className="fixed top-1 z-50 start-0 p-1 cursor-pointer"
+              className="fixed top-6 z-50 start-0 p-1 cursor-pointer"
               onClick={() => setToggle(true)}
             >
               <CloseOutlinedIcon />

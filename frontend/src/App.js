@@ -13,6 +13,10 @@ import User from "./pages/User";
 import { useSelector } from "react-redux";
 import Auth from "./pages/Auth";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
+import News from "./components/News";
+// import MentorProfile from "./components/MentorProfile";
+import FindMentor from "./components/FindMentor";
 import MentorProfile from "./pages/MentorProfile";
 import Mentor from "./pages/Mentor";
 
@@ -25,8 +29,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
           <Route path="/*" element={<NotFound />} />
+          <Route path="/find_mentor" element={<FindMentor />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/mentor" element={<MentorProfile />} />
 
           <Route
             path="/userdashboard"
