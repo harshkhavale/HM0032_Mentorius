@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { logo } from "../assets";
-import JoinClassrooms from "./modals/JoinClassrooms";
+import MentorForm from "./modals/MentorForm";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import CreateSubject from "../components/modals/CreateSubject";
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const isNonMobileScreen = useMediaQuery("(min-width:1000px)");
-
+  const user = useSelector((state) => state.user.user);
   return (
-    <div className="navbar text-sm md:text-base p-2 flex justify-between w-full overflow-x-hidden items-center">
-      {showModal && <JoinClassrooms onClose={() => setShowModal(false)} />}
+    <div className="navbar text-sm md:text-base w-full p-2 flex justify-between  items-center">
+      {user.usertype != "MENTOR" && showModal && (
+        <MentorForm onClose={() => setShowModal(false)} />
+      )}
+      {user.usertype == "MENTOR" && showModal && (
+        <CreateSubject onClose={() => setShowModal(false)} />
+      )}
 
       <div className="logo">
         <img src={logo} className="md:h-14 ps-6 md:ps-auto h-10" alt="" />
@@ -56,7 +64,7 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        {isNonMobileScreen && (
+        {isNonMobileScreen && user && (
           <button
             onClick={() => setShowModal(true)}
             className="ml-auto bg-primary text-white shadow-lg p-2 flex  items-center gap-2 rounded-lg"
@@ -75,8 +83,16 @@ const Navbar = () => {
                 d="M3 12h18M12 3v18"
               />
             </svg>
-            Join Classroom
+            {user.usertype == "MENTOR" ? "Create Classroom" : "Become Mentor"}
           </button>
+        )}
+        {!user && (
+          <Link
+            to={"/auth/login"}
+            className="bg-primary text-white rounded-2xl p-2"
+          >
+            signin
+          </Link>
         )}
       </div>
     </div>

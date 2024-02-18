@@ -16,6 +16,8 @@ import Box from "@mui/material/Box";
 import { motion } from "framer-motion";
 import { slideFromLeft } from "../constants/style";
 import { useDispatch, useSelector } from "react-redux";
+import { publicRequest } from "../redux/requestMethods.js";
+import { setUsertype } from "../redux/userSlice.js";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -24,7 +26,6 @@ const Login = () => {
   const { isFetching, error } = useSelector((state) => state.user);
   const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-
   const handleClick = async (e) => {
     e.preventDefault();
     try {
@@ -36,14 +37,32 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if (error) {
-      toast.error("Login failed. Please try again.");
-    } else if (!isFetching && user) {
-      // Assuming 'user' is the data returned upon successful login
-      handleLoginSuccess();
-      toast.success("Login successful!");
-      navigate("/dashboard");
-    }
+    const fetchData = async () => {
+      if (error) {
+        toast.error("Login failed. Please try again.");
+      } else if (!isFetching && user) {
+        // Assuming 'user' is the data returned upon successful login
+        handleLoginSuccess();
+        toast.success("Login successful!");
+        try {
+          const mentor = await publicRequest.get(`/mentors/check/${user.id}`);
+          console.log(mentor);
+          if (mentor.data) {
+            // If mentor data is returned, set usertype to "Mentor"
+            dispatch(setUsertype("MENTOR"));
+          }
+          navigate("/mentordashboard");
+        } catch (error) {
+          console.error("Error fetching mentor:", error);
+          navigate("/userdashboard");
+          dispatch(setUsertype("USER"));
+
+          // Handle error
+        }
+      }
+    };
+
+    fetchData(); // Call the async function immediately
   }, [error, isFetching, user]);
 
   const handleLoginSuccess = () => {

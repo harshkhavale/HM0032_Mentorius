@@ -74,6 +74,7 @@ export const login = async (req, res) => {
       contact: user.contact,
       isadmin: user.isadmin,
       token: token,
+      usertype: "USER",
     };
     res.status(200).json(returnUser);
   } catch (error) {

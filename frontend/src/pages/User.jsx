@@ -7,10 +7,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import UserMain from "../components/user/UserMain";
 import UserLeftbar from "../components/user/UserLeftbar";
+import Explore from "../components/Explore";
+import Mentor from "../components/user/Mentor";
+import LiveSessions from "../components/user/LiveSessions";
+import Classroom from "../components/user/Classroom";
 
 const User = () => {
   const isNonMobileScreen = useMediaQuery("(min-width:1000px)");
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const [selectedSidebarItem, setSelectedSidebarItem] = useState("Dashboard"); // State to keep track of the selected sidebar item
 
   const handleSidebarItemClick = (item) => {
@@ -18,9 +22,9 @@ const User = () => {
   };
 
   return (
-    <div className="User">
+    <div className="User w-full overflow-hidden">
       {!isNonMobileScreen && (
-        <div>
+        <div className="">
           {toggle ? (
             <div
               className="fixed top-1 z-50 start-0 p-1 cursor-pointer"
@@ -40,7 +44,7 @@ const User = () => {
       )}
       <div className="main flex justify-center">
         {isNonMobileScreen && (
-          <div className="w-2/12 ">
+          <div className=" ">
             <UserLeftbar handler={handleSidebarItemClick} />
           </div>
         )}
@@ -48,11 +52,16 @@ const User = () => {
         {!isNonMobileScreen && !toggle && (
           <UserLeftbar handler={handleSidebarItemClick} />
         )}
-        <div className="flex w-full">
-          <div id="main" className="">
+        <div className="flex overflow-hidden ">
+          <div id="main min-h-screen " className=" ">
             {/* Render components based on the selected sidebar item */}
             {selectedSidebarItem === "Dashboard" && <UserMain />}
-            {/* {selectedSidebarItem === "Mentors" && <Dashboard />}
+            {selectedSidebarItem === "Explore" && <Explore />}
+            {selectedSidebarItem === "Mentors" && <Mentor />}
+            {selectedSidebarItem === "Live Sessions" && <LiveSessions />}
+            {selectedSidebarItem === "Classrooms" && <Classroom />}
+
+            {/* 
             {selectedSidebarItem === "Subjects" && <Subjects />}
             {selectedSidebarItem === "Assignments" && <Assignments />}
             {selectedSidebarItem === "Quize" && <Quizes />}
@@ -61,13 +70,17 @@ const User = () => {
             {/* Render other components based on the selected sidebar item */}
           </div>
         </div>
-
-        {isNonMobileScreen && (
-          <div className="w-2/12 ">
-            <Profile />{" "}
-          </div>
-        )}
       </div>
+      {isNonMobileScreen && (
+        <div className=" fixed right-0 top-20">
+          <Profile />
+        </div>
+      )}
+      {isNonMobileScreen && selectedSidebarItem === "Profile" && (
+        <div className=" w-full">
+          <Profile />
+        </div>
+      )}
     </div>
   );
 };

@@ -5,7 +5,7 @@ const userSlice = createSlice({
   initialState: {
     isFetching: false,
     error: false,
-    theme:'LIGHT'
+    theme: "LIGHT",
   },
   reducers: {
     loginStart: (state) => {
@@ -40,13 +40,16 @@ const userSlice = createSlice({
       state.user = null;
       state.isFetching = false;
       state.error = false;
-      
+
       // Clear both user and cart states
       localStorage.removeItem("user");
     },
-    setTheme:(state)=>{
-      state.theme = state.theme === 'LIGHT'? 'DARK' : 'LIGHT';
-    }
+    setTheme: (state) => {
+      state.theme = state.theme === "LIGHT" ? "DARK" : "LIGHT";
+    },
+    setUsertype: (state, action) => {
+      state.user.usertype = action.payload; // Update usertype of user
+    },
   },
 });
 
@@ -59,6 +62,7 @@ export const {
   registerSuccess,
   logout,
   initialState,
-  setTheme
+  setTheme,
+  setUsertype,
 } = userSlice.actions;
 export default userSlice.reducer;

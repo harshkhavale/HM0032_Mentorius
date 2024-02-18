@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom"; // Import useParams
-import { officeview, teacherbanner } from "../assets";
+import { backgrounds, officeview, teacherbanner } from "../assets";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -29,7 +29,7 @@ const Auth = () => {
         <div className="banner">
           <div className="w-[59.9vw] h-screen overflow-hidden ">
             <img
-              src={teacherbanner}
+              src={backgrounds}
               alt=""
               className="w-full h-full p-10 object-contain "
             />

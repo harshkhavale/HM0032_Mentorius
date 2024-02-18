@@ -6,7 +6,7 @@ import {
   registerStart,
   registerSuccess,
 } from "./userSlice";
-import { userRequest,publicRequest } from "./requestMethods";
+import { userRequest, publicRequest } from "./requestMethods";
 
 export const login = async (dispatch, user) => {
   dispatch(loginStart());
@@ -22,7 +22,6 @@ export const login = async (dispatch, user) => {
     dispatch(loginFailure());
   }
 };
-
 
 export const register = async (dispatch, user) => {
   dispatch(registerStart());

@@ -31,7 +31,7 @@ const JoinClassrooms = ({ onClose }) => {
                 />
               </svg>
             </button>
-            {/* <div>
+            <div>
               <p className=" font-semibold text-2xl flex justify-center my-4">
                 Join Classroom
               </p>
@@ -52,8 +52,7 @@ const JoinClassrooms = ({ onClose }) => {
                   Join Classroom
                 </button>
               </div>
-            </div> */}
-            <CreateMentor />
+            </div>
           </div>
         </div>
       </div>

@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const PolarAreaChart = ({ data }) => {
+const LineChart = ({ data }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
     if (data && data.length > 0) {
-      // Check if the chartRef is defined and chart instance exists
-      if (chartRef.current && chartRef.current !== undefined) {
+      if (chartRef.current !== null) {
         // If a chart instance already exists, destroy it
         chartRef.current.destroy();
       }
@@ -21,7 +20,7 @@ const PolarAreaChart = ({ data }) => {
 
       // Create the polar area chart
       chartRef.current = new Chart(ctx, {
-        type: "polarArea",
+        type: "line",
         data: {
           labels: studentNames,
           datasets: [
@@ -56,7 +55,7 @@ const PolarAreaChart = ({ data }) => {
       {/* Apply Tailwind CSS classes to adjust canvas size */}
       <canvas
         id="scoreChart"
-        className="w-full h-64 md:h-40 lg:h-128"
+        className="w-full h-80 md:h-80 lg:h-128"
         // Adjust the width and height as needed
         width="800"
         height="400"
@@ -65,4 +64,4 @@ const PolarAreaChart = ({ data }) => {
   );
 };
 
-export default PolarAreaChart;
+export default LineChart;

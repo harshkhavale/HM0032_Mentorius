@@ -8,8 +8,10 @@ import PolarAreaChart from "../widgets/PolarAreaChart";
 import { attendance, score } from "../../constants/student";
 import { teacherbanner, userbanner } from "../../assets";
 import SubjectCard from "../widgets/SubjectCard";
+import LineChart from "../widgets/LineChart";
+import { enrollments } from "../../constants/user";
 
-const UserMain = () => {
+const MentorMain = () => {
   const [subjects, setSubjects] = useState([]);
   const user = useSelector((state) => state.user.user);
 
@@ -35,7 +37,7 @@ const UserMain = () => {
       <div className="banner h-60 w-full bg-primary overflow-hidden rounded-2xl shadow-sm flex justify-between items-center">
         <div className="bg-primary text-white md:p-8 p-2">
           <p className="md:text-3xl text-xl font-bold ">
-            Welcome back, {user.fullname}!
+            Welcome back, Mentor {user.fullname}!
           </p>
           <p className="text-sm  ">
             Always stay updated in your student portal
@@ -43,13 +45,13 @@ const UserMain = () => {
         </div>
         <div className="">
           <img
-            className="float-right md:h-72 h-full object-contain  "
-            src={userbanner}
+            className="float-right md:h-60 h-full object-contain  "
+            src={teacherbanner}
             alt=""
           />
         </div>
       </div>
-      <div className=" font-semibold text-3xl mb-4 my-4">
+      <div className=" font-semibold text- mb-4 my-4">
         Classrooms you have enrolled
       </div>
 
@@ -59,12 +61,12 @@ const UserMain = () => {
         ))}
       </div>
       <div className="graph flex flex-col md:flex-row gap-2 p-2 items-center justify-between  ">
-        <div className="attendance">
-          <p className=" text-sm  mb-10">Attendance</p>
+        <div className="attendance p-2 shadow-lg">
+          <p className=" text-sm font-semibold ">Attendance</p>
           <BarChart data={attendance} />
         </div>
-        <div className="score">
-          <p className=" text-sm mb-10">Overall Score</p>
+        <div className="score p-2 shadow-lg">
+          <p className=" text-sm font-semibold  ">Overall Score</p>
           <PolarAreaChart data={score} />
         </div>
       </div>
@@ -72,4 +74,4 @@ const UserMain = () => {
   );
 };
 
-export default UserMain;
+export default MentorMain;

@@ -8,7 +8,7 @@ const Profile = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center p-4 shadow-xl h-screen fixed">
+      <div className="flex flex-col items-center p-4 shadow-xl h-screen">
         <p className="text-sm font-semibold mb-4 text-primary">Your Profile</p>
 
         <div className="rounded-full overflow-hidden border-4 border-primary mb-4">
@@ -21,7 +21,7 @@ const Profile = () => {
 
         <p className="text-xl font-semibold mb-2">{user.fullname}</p>
 
-        <CalendarComponent />
+        {/* <CalendarComponent /> */}
       </div>
     </div>
   );

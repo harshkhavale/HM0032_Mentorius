@@ -10,6 +10,8 @@ import { Google } from "@mui/icons-material";
 import { apple, github, google, officeview } from "../assets/index.js";
 import { motion } from "framer-motion";
 import { slideFromLeft } from "../constants/style";
+import { publicRequest } from "../redux/requestMethods.js";
+import { setUsertype } from "../redux/userSlice.js";
 const Register = () => {
   const isNonMobileScreen = useMediaQuery("(min-width:1000px)");
   const [email, setEmail] = useState("");
@@ -21,6 +23,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user.user);
   const handleClick = async (e) => {
     e.preventDefault();
     if (!password.match(cfpassword)) {
@@ -36,7 +39,21 @@ const Register = () => {
 
         if (!error) {
           toast.success("Registration successful!");
-          navigate("/dashboard");
+          try {
+            const mentor = await publicRequest.get(`/mentors/check/${user.id}`);
+            console.log(mentor);
+            if (mentor.data) {
+              // If mentor data is returned, set usertype to "Mentor"
+              dispatch(setUsertype("MENTOR"));
+            }
+            navigate("/mentordashboard");
+          } catch (error) {
+            console.error("Error fetching mentor:", error);
+            navigate("/userdashboard");
+            dispatch(setUsertype("USER"));
+
+            // Handle error
+          }
         } else {
           toast.error("Registration failed. Please try again.");
         }

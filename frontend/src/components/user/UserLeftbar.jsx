@@ -7,6 +7,9 @@ import { userDashboardLinks } from "../../constants/user";
 import Settings from "../widgets/Settings";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import JoinClassrooms from "../modals/JoinClassrooms";
+import CreateSubject from "../modals/CreateSubject";
+import MentorForm from "../modals/MentorForm";
+
 const UserLeftbar = ({ handler }) => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -15,10 +18,15 @@ const UserLeftbar = ({ handler }) => {
   const handleItemClick = (itemName) => {
     handler(itemName); // Call handler with the item name
   };
-
+  const user = useSelector((state) => state.user.user);
   return (
     <div className="sidebar rounded-sm fixed top-16 start-0 shadow-xl h-screen bg-white z-50">
-      {showModal && <JoinClassrooms onClose={() => setShowModal(false)} />}
+      {user.usertype != "MENTOR" && showModal && (
+        <MentorForm onClose={() => setShowModal(false)} />
+      )}
+      {user.usertype == "MENTOR" && showModal && (
+        <CreateSubject onClose={() => setShowModal(false)} />
+      )}{" "}
       <div className="top p-7">
         <p className="font-bold my-4">Overview</p>
         {userDashboardLinks.map((item, index) => (
@@ -51,11 +59,10 @@ const UserLeftbar = ({ handler }) => {
                 d="M3 12h18M12 3v18"
               />
             </svg>
-            Join Classroom
+            {user.usertype == "MENTOR" ? "Create Classroom" : "Become Mentor"}
           </button>
         )}
       </div>
-
       <div className="bottom">
         <Settings />
       </div>

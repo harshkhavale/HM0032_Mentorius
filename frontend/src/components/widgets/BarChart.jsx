@@ -1,9 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
 const BarChart = ({ data }) => {
+  const chartRef = useRef(null);
+
   useEffect(() => {
     if (data && data.length > 0) {
+      // Check if a chart instance already exists
+      if (chartRef.current !== null) {
+        // If a chart instance already exists, destroy it
+        chartRef.current.destroy();
+      }
+
       // Extract dates and attendance values
       const dates = data.map((item) => item.date);
       const attendances = data.map((item) => item.attendance);
@@ -12,7 +20,7 @@ const BarChart = ({ data }) => {
       const ctx = document.getElementById("attendanceChart").getContext("2d");
 
       // Create the bar chart
-      new Chart(ctx, {
+      chartRef.current = new Chart(ctx, {
         type: "bar",
         data: {
           labels: dates,

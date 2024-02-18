@@ -121,3 +121,30 @@ export const userDashboardLinks = [
     ),
   },
 ];
+export const enrollments = [
+  {
+    id: 1,
+    name: "Alice",
+    score: 85,
+  },
+  {
+    id: 2,
+    name: "Bob",
+    score: 70,
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    score: 95,
+  },
+  {
+    id: 4,
+    name: "David",
+    score: 60,
+  },
+  {
+    id: 5,
+    name: "Eve",
+    score: 80,
+  },
+];

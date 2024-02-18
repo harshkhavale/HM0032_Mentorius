@@ -5,7 +5,7 @@ import cors from "cors";
 import authRouter from "./routes/Auth.js";
 import subjectRouter from "./routes/Subject.js";
 import mentorRouter from "./routes/Mentor.js";
-
+import paymentRouter from "./routes/paymentorder.js";
 import bodyParser from "body-parser";
 
 import multer from "multer";
@@ -29,6 +29,7 @@ app.use(
   "/thumbnails",
   express.static(path.join(__dirname, "public/thumbnails"))
 );
+app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 const corsOptions = {
   origin: "http://localhost:3000",
@@ -54,6 +55,8 @@ app.get("/test", (req, res) => {
 app.use("/api/auth", authRouter);
 app.use("/api/subjects", subjectRouter);
 app.use("/api/mentors", mentorRouter);
+app.use("/api/payment", paymentRouter);
+
 // Global error handler middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);

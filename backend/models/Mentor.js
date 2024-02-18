@@ -25,16 +25,19 @@ const Mentor = mongoose.Schema(
     education: [
       {
         type: String,
+        required: true,
       },
     ],
     experience: {
       type: String,
       required: true,
     },
-    interests: {
-      type: String,
-      required: true,
-    },
+    interests: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
 
     profilepicture: {
       type: String,
@@ -43,6 +46,11 @@ const Mentor = mongoose.Schema(
     coverpicture: {
       type: String,
     },
+    sociallinks: [
+      {
+        type: String,
+      },
+    ],
   },
   {
     timestamps: true,
